@@ -4,7 +4,7 @@ from torchvision import transforms
 from torchvision.datasets import ImageFolder
 from torchvision.datasets.utils import download_and_extract_archive
 from torch.utils.data import DataLoader, Dataset
-from imagenet_classes import labels_dict
+from imagenetcita.imagenet_classes import labels_dict
 import pytorch_lightning as pl
 
 class ImageNetIDWrapper(Dataset):
@@ -116,5 +116,5 @@ class Imagenetcita(ImagenetDataset):
     def __init__(self, dl_path = "./DATA", batch_size = 64, num_workers=4):
         super().__init__(dl_path = dl_path, batch_size = batch_size, num_workers=num_workers, train_subpath="train", val_subpath="test")
 
-        self.data_path = Path(self.dl_path) / 'imagenetcita-300'
+        self.data_path = Path(self.dl_path) / 'petiteimagenet_300'
         self.data_url = "https://github.com/jspaezp/imagenetcita/releases/download/v0.0.1/petiteimagenet_300.tgz"

@@ -17,4 +17,14 @@ depth (~ 10 images per class).
 
 ## Usage
 
+    pip install git+https://github.com/jspaezp/imagenetcita --user
+
+```python
+
+from imagenetcita.datamodules import imagenetcita
+
+imagenetcita.setup()
+
+```
+
 UNDER CONSTRUCTION
